@@ -7,7 +7,7 @@ router.use('/proxy/:url', (req, res, next) => {
     if (!url) {
         return res.status(400).send('URL no proporcionada');
     }
-    return proxy(url)(req, res, next);
+    proxy(url)(req, res, next);
 });
 
 module.exports = router;

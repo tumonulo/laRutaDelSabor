@@ -1,13 +1,23 @@
 const { Router } = require('express');
-const router = Router();
-const proxy = require('express-http-proxy');
+const proxy = require('express-http-proxy')
+const router = Router()
 
-router.use('/proxy/:url', (req, res, next) => {
-    const url = req.params.url;
+router.get('/proxy/:url', (req, res, next) => {
+    const url = decodeURIComponent(req.params.url)
+
     if (!url) {
-        return res.status(400).send('URL no proporcionada');
+        return res.status(400).send('URL no proporcionada')
     }
-    proxy(url)(req, res, next);
-});
+
+    try {
+        new URL(url)
+    } catch (error) {
+        return res.status(400).send('URL no válida')
+    }
+
+    return proxy(url, {
+        proxyReqPathResolver: () => '/',
+    })(req, res, next);
+})
 
 module.exports = router;

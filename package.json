@@ -1,7 +1,7 @@
 {
   "name": "prueba-de-proxy",
   "version": "1.0.0",
-  "description": "$ npm install express-http-proxy --save",
+  "description": "",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

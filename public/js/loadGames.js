@@ -13,12 +13,12 @@ window.addEventListener('DOMContentLoaded', async () => {
             gameDiv.classList.add('game')
         
             const gameImg = document.createElement('img')
-            gameImg.src = `https://api.popcat.xyz/screenshot?url=${encodeURIComponent(`/games/${game}`)}`
+            gameImg.src = `https://api.popcat.xyz/screenshot?url=${encodeURIComponent(window.location.origin + `/games/${game}`)}`
             gameImg.alt = `${game} thumbnail`
             gameImg.classList.add('game-image')
-
+            console.log(gameImg.src)
             gameImg.onerror = () => {
-                gameImg.src = '/path/to/your/default-image.jpg'
+                gameImg.src = '../assets/img/webPreviewNotFound.png'
             }
         
             const gameText = document.createElement('p')

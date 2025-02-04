@@ -9,7 +9,7 @@ const reels = [
 ]
 
 let auto
-let clicked = fales
+let clicked = false
 
 const spinButton = document.getElementById('spin-button');
 const autoButton = document.getElementById('auto-button');
@@ -21,7 +21,7 @@ autoButton.addEventListener('click', () => {
         spin()
         auto = setInterval(spin, 1000 * 3)
         clicked = true
-        
+
         setTimeout(() => {
             clicked = false
         }, 1000 * 3);

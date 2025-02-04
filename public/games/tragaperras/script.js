@@ -8,13 +8,24 @@ const reels = [
     document.getElementById('reel3')
 ]
 
+let auto
+let clicked = fales
+
 const spinButton = document.getElementById('spin-button');
 const autoButton = document.getElementById('auto-button');
 const result = document.getElementById('result');
 
 spinButton.addEventListener('click', spin)
 autoButton.addEventListener('click', () => {
-    const auto = setInterval(spin, 1000 * 3)
+    if (clicked === false) {
+        spin()
+        auto = setInterval(spin, 1000 * 3)
+        clicked = true
+        
+        setTimeout(() => {
+            clicked = false
+        }, 1000 * 3);
+    }
 })
 
 // Función para girar los rodillos

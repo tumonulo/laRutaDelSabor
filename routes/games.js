@@ -1,7 +1,7 @@
 const { Router } = require('express')
 const router = Router()
 
-const gamesList = require('../controllers/games/gameList.js')
+const gamesList = require('../controllers/games/gamesList.js')
 const gamesGame = require('../controllers/games/gamesGame.js')
 
 router.get('/', (req, res) => {

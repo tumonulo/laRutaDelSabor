@@ -1,4 +1,4 @@
-const proxy = require('express-http-proxy')
+const proxy = require('express-http-proxy');
 
 module.exports = function searchUrl(req, res, next) {
     const url = req.params.url
@@ -7,9 +7,12 @@ module.exports = function searchUrl(req, res, next) {
         return res.status(400).send('No se ha proporcionado ninguna URL.')
     }
 
-    const proxyMiddleware = proxy(url, {
+    const targetUrl = decodeURIComponent(url)
+
+    const proxyMiddleware = proxy(targetUrl, {
         proxyReqPathResolver: (req) => req.originalUrl,
+        xfwd: true,
     })
 
     proxyMiddleware(req, res, next)
-}
+};

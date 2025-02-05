@@ -10,7 +10,7 @@ module.exports = async function appsList(req, res) {
       }
   
       const folders = files.filter(file => {
-        const filePath = path.join(appsDire, file)
+        const filePath = path.join(appsDir, file)
         return fs.statSync(filePath).isDirectory()
       })
   

@@ -1,7 +1,8 @@
 body {
     margin: 0;
+    padding: 0;
     font-family: Arial, sans-serif;
-    background-color: #f0f0f0; /* Fondo de la página para prueba */
+    background-color: #494949;
 }
 
 .roots {
@@ -10,8 +11,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con opacidad */
-    color: white; /* Color del texto en la barra */
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
     border-style: solid;
     border-width: 3px;
     border-radius: 15px;
@@ -21,7 +22,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
+    z-index: 1000;
 }
 
 .root-button-container {
@@ -30,19 +31,19 @@ body {
 }
 
 .root-button {
-    background-color: transparent; /* Sin fondo */
-    color: white; /* Color del texto */
+    background-color: transparent;
+    color: white;
     border-style: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px; /* Tamaño inicial del texto */
-    transition: all 0.3s ease; /* Transición suave para todos los cambios */
-    text-decoration: none; /* Sin subrayado inicial */
+    font-size: 16px;
+    transition: all 0.3s ease;
+    text-decoration: none;
 }
 
 .root-button:hover {
-    font-size: 18px; /* Aumenta el tamaño del texto */
-    padding: 12px 22px; /* Aumenta el padding */
-    text-decoration: underline; /* Subraya el texto */
+    font-size: 18px;
+    padding: 12px 22px; 
+    text-decoration: underline;
 }

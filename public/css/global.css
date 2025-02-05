@@ -7,7 +7,7 @@ body {
 
 .roots {
     position: fixed;
-    top: 0;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
@@ -17,7 +17,7 @@ body {
     border-width: 3px;
     border-radius: 15px;
     border-color: black;
-    padding: 7px;
+    padding: 10px;
     box-shadow: 0px 0px 13px 2px rgba(0,0,0,0.67);
     display: flex;
     justify-content: flex-end;
@@ -44,6 +44,6 @@ body {
 
 .root-button:hover {
     font-size: 18px;
-    padding: 12px 22px; 
+    padding: 0px 22px; 
     text-decoration: underline;
 }

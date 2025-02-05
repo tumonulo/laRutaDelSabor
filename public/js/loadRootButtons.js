@@ -1,4 +1,4 @@
-const button1 = document.getElementsById('root-button-1')
+const button1 = document.getElementById('root-button-1')
 
 window.addEventListener('DOMContentLoaded', async () => {
     try {

@@ -1,37 +1,113 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>JavaScript ChatGPT Clone</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Generation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        header {
+            background-color: #2d2d2d;
+            color: #ffffff;
+            width: 100%;
+            padding: 1rem;
+            text-align: center;
+        }
+        .container {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+        }
+        .chat {
+            background: #333333;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+            max-width: 600px;
+            height: 70vh;
+            overflow-y: auto;
+        }
+        .input-area {
+            display: flex;
+            margin-top: auto;
+        }
+        .input-area input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #555;
+            background-color: #444;
+            color: #e0e0e0;
+            border-radius: 4px 0 0 4px;
+        }
+        .input-area button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #4a90e2;
+            color: white;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+    </style>
 </head>
-
 <body>
-    <section class="side-bar">
-        <button>New Chat</button>
-        <div class="history"></div>
-        <nav>
-            <p>Made by Aniket Raj</p>
-        </nav>
-    </section>
-
-    <section class="main">
-        <h1>Aniket GPT</h1>
-        <p id="output"></p>
-        <div class="bottom-section">
-            <div class="input-container">
-                <input />
-                <div id="submit">➢</div>
+    <header>
+        <h1>Image Generation</h1>
+    </header>
+    <div class="container">
+        <div class="chat" id="imageChat">
+            <div class="messages" id="imageMessages"></div>
+            <div class="input-area">
+                <input type="text" id="imageInput" placeholder="Describe la imagen...">
+                <button onclick="generateImage()">Generar</button>
             </div>
         </div>
-        <p class="info">Chat GPT March 29 version. Free Research Preview.
-            Our goal is to make AI systems more natural and safe to interact with.
-            Your feedback will help us improve.
-        </p>
-    </section>
+    </div>
 
-<script src="app.js"></script>
+    <script>
+        async function generateImage() {
+            const input = document.getElementById('imageInput')
+            const messages = document.getElementById('imageMessages')
+            if (input.value.trim() !== '') {
+                const description = document.createElement('div')
+                description.textContent = `Descripción: ${input.value}`
+                const image = document.createElement('img')
+                image.alt = input.value
+                image.style.marginTop = '10px'
+                messages.appendChild(description)
+                messages.appendChild(image)
+
+                try {
+                    const response = await fetch(`/image/generations/${input.value}`)
+                    const data = await reponse.json()
+                    const imageURL = data.image
+                    image.src = imageURL
+                    messages.scrollTop = messages.scrollHeight;
+                    input.value = '';
+                } catch (error) {
+                    const errMessage = document.createElement('p')
+                    errMessage.valur = error
+                    errMessage.style.color = 'red'
+                    messages.appendChild(errMessage)
+                    messages.scrollTop = messages.scrollHeight;
+                    input.value = '';
+                    return
+                }
+            }
+        }
+    </script>
 </body>
-
 </html>

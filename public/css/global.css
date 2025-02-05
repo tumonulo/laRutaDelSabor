@@ -1,6 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #f0f0f0; /* Fondo de la página para prueba */
 }
 
 .roots {
@@ -9,8 +10,8 @@ body {
     left: 50%;
     transform: translateX(-50%);
     width: 90%;
-    background-color: rgba(255, 255, 255, 0.9);
-    color: black;
+    background-color: rgba(0, 0, 0, 0.8); /* Fondo oscuro con opacidad */
+    color: white; /* Color del texto en la barra */
     border-style: solid;
     border-width: 3px;
     border-radius: 15px;
@@ -20,6 +21,7 @@ body {
     display: flex;
     justify-content: flex-end;
     align-items: center;
+    z-index: 1000; /* Asegura que la barra esté por encima de otros elementos */
 }
 
 .root-button-container {
@@ -28,16 +30,19 @@ body {
 }
 
 .root-button {
-    background-color: #333;
-    color: white;
+    background-color: transparent; /* Sin fondo */
+    color: white; /* Color del texto */
     border-style: none;
     padding: 10px 20px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px; /* Tamaño inicial del texto */
+    transition: all 0.3s ease; /* Transición suave para todos los cambios */
+    text-decoration: none; /* Sin subrayado inicial */
 }
 
 .root-button:hover {
-    background-color: #555;
-    transform: scale(1.05);
+    font-size: 18px; /* Aumenta el tamaño del texto */
+    padding: 12px 22px; /* Aumenta el padding */
+    text-decoration: underline; /* Subraya el texto */
 }

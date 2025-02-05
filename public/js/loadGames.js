@@ -16,14 +16,14 @@ window.addEventListener('DOMContentLoaded', async () => {
             gameImg.src = `https://api.popcat.xyz/screenshot?url=${encodeURIComponent(window.location.origin + `/games/${game}`)}`
             gameImg.alt = `${game} thumbnail`
             gameImg.classList.add('game-image')
-            console.log(gameImg.src)
             gameImg.onerror = () => {
                 gameImg.src = '../assets/img/webPreviewNotFound.png'
             }
         
             const gameText = document.createElement('p')
+            gameText.classList.add('game-text')
             gameText.textContent = game.replace(/-/g, ' ').toUpperCase();
-                    
+
             gameDiv.appendChild(gameImg);
             gameDiv.appendChild(gameText);
         

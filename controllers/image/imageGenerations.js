@@ -13,10 +13,9 @@ module.exports = async function imageGenerations(req, res) {
             }
         })
         const imageURL = response.data.image.url
+        res.json({ image: imageURL })
     } catch(error) {
         console.error(error)
         res.json({ error: 'An error occur by creating the image'})
     }
-  
-    res.json({ image: imageURL })
 }

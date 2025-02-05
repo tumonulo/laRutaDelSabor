@@ -22,7 +22,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             }
         
             const gameText = document.createElement('p')
-            gameText.textContent = game.toUpperCase()
+            gameText.textContent = game.replace(\-\g, \ \).toUpperCase()
             gameText.classList.add('game-text')
         
             gameDiv.appendChild(gameImg);

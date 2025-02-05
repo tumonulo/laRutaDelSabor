@@ -19,7 +19,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             return console.log('No hay ninguna app')
         }
 
-        buttonApps.textContent = `Apps - ${gamesData.games.length}`
+        buttonApps.textContent = `Apps - ${appsData.apps.length}`
 
     } catch (error) {
         console.error('Error al cargar los juegos o las apps:', error)

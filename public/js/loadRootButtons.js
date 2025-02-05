@@ -12,7 +12,7 @@ window.addEventListener('DOMContentLoaded', async () => {
 
         buttonGames.textContent = `Games - ${gamesData.games.length}`
 
-        const appsResponse = await fetch('/games/list')
+        const appsResponse = await fetch('/apps/list')
         const appsData = await appsResponse.json()
 
         if (!appsData) {

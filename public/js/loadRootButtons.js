@@ -3,9 +3,13 @@ const button1 = document.getElementById('root-button-1')
 window.addEventListener('DOMContentLoaded', async () => {
     try {
         const response = await fetch('/games/list')
-        const data = await response.json()
+        const gamesData = await response.json()
 
-        button1.textContent = `Games - ${data.games.length}`
+        if (!gamesData) {
+            return console.log('No hay ningun juego')
+        }
+
+        button1.textContent = `Games - ${gamesData.games.length}`
 
 
     } catch (error) {

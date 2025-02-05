@@ -21,10 +21,6 @@ autoButton.addEventListener('click', () => {
         spin()
         auto = setInterval(spin, 1000 * 3)
         clicked = true
-
-        setTimeout(() => {
-            clicked = false
-        }, 1000 * 3);
     }
 })
 
@@ -66,6 +62,7 @@ function checkResult() {
     if (reelValues[0] === reelValues[1] && reelValues[1] === reelValues[2]) {
         result.textContent = '¡Ganaste! 🎉'
         clearInterval(auto)
+        clicked = false
     } else {
         result.textContent = 'Inténtalo de nuevo. 😢';
     }

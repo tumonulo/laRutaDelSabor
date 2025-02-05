@@ -41,7 +41,7 @@ body {
 }
 
 .root-button:hover {
-    font-size: 18px;
     padding: 0px 22px; 
+    background-color: rgba(101, 101, 101, 0.6);
     text-decoration: underline;
 }

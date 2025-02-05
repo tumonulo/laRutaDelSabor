@@ -2,14 +2,15 @@ const axios = require('axios')
 
 module.exports = async function imageGenerations(req, res) {
     const { prompt } = req.params.prompt
-    const tokenImageGeberations = process.env.TOKENIMAGEGENERATIONS
+    const tokenImageGenerations = process.env.TOKENIMAGEGENERATIONS
     try {
-        const response = await axios.get("https://api.rnilaweera.lk/api/v1/user/dalle", {
+        console.log(tokenImageGenerations)
+        const response = await axios.post("https://api.rnilaweera.lk/api/v1/user/dalle", {
             prompt: prompt,
             negative_prompt: "blurry, bad quality, worst quality",
         }, {
             headers: {
-                Authorization: `Bearer ${tokenImageGeberations}`,
+                Authorization: `Bearer ${tokenImageGenerations}`,
             }
         })
         const imageURL = response.data.image.url

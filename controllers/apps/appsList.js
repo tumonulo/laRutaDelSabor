@@ -4,7 +4,7 @@ const path = require('node:path')
 module.exports = async function appsList(req, res) {
     const appsDir = path.join(process.cwd(), 'public', 'apps')
 
-    fs.readdir(gamesDir, (err, files) => {
+    fs.readdir(appsDir, (err, files) => {
       if (err) {
         return res.status(500).json({ error: 'No apps found' })
       }

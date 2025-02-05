@@ -1,4 +1,5 @@
-const button1 = document.getElementById('root-button-1')
+const buttonGames = document.getElementById('root-button-games')
+const buttonApps = document.getElementById('root-button-apps')
 
 window.addEventListener('DOMContentLoaded', async () => {
     try {
@@ -9,7 +10,7 @@ window.addEventListener('DOMContentLoaded', async () => {
             return console.log('No hay ningun juego')
         }
 
-        button1.textContent = `Games - ${gamesData.games.length}`
+        buttonGames.textContent = `Games - ${gamesData.games.length}`
 
         const appsResponse = await fetch('/games/list')
         const appsData = await appsResponse.json()
@@ -17,6 +18,8 @@ window.addEventListener('DOMContentLoaded', async () => {
         if (!appsData) {
             return console.log('No hay ninguna app')
         }
+
+        buttonApps.textContent = `Apps - ${gamesData.games.length}`
 
     } catch (error) {
         console.error('Error al cargar los juegos o las apps:', error)

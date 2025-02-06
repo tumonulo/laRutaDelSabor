@@ -2,7 +2,7 @@ const axios = require('axios')
 
 module.exports = async function imageGenerations(req, res) {
     const { prompt } = req.params.prompt
-    const tokenImageGenerations = process.env.TOKENIMAGEGENERATIONS
+    const tokenImageGenerations = process.env.TOKEN_IMAGE_GENERATIONS
     try {
         const response = await axios.post("https://api.rnilaweera.lk/api/v1/user/dalle", {
             prompt: prompt,

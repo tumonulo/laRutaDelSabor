@@ -3,70 +3,164 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  /* Font global */
-  body {
+}
+
+/* Font global */
+body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #fef8f5; /* Fondo crema */
     color: #333;
-  }
-  
-  /* Contenedor central */
-  .container {
+}
+
+/* Contenedor central */
+.container {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
+}
+
+
+/* Estilos para enlaces comunes 
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+a:hover {
+    color: #F6AE2D; 
+}
+*/
+
+
+
+header {
+    background-color: #000;
+    color: white;
+    font-family: 'Arial', sans-serif;
   }
   
-  /* Encabezado común */
-  header {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
+  /* Barra superior */
+  .top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    position: relative;
+  }
+  
+  /* Iconos sociales */
+  .social-icons {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+  }
+  
+  .social-icons a {
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icons a:hover {
+    color: #22c55e; /* Verde clarito en hover */
+  }
+  
+  /* Logo centrado */
+  .logo-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     text-align: center;
   }
   
-  header h1 {
-    font-size: 2rem;
+  .logo-container img {
+    height: 100px;
   }
   
-  header nav {
-    margin-top: 10px;
+  /* Navegación principal */
+  nav {
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, #a33e16, #1e3a8a);
+    padding: 15px;
+    border-radius: 10px;
+    margin: 0 auto;
+    width: 90%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.5);
   }
   
-  header nav a {
-    color: #fff;
-    margin: 0 15px;
-    text-decoration: none;
+  /* Lista de navegación */
+  nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Ítems del menú */
+  nav li {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
     font-weight: bold;
+    border-right: 1px solid rgba(255, 255, 255, 0.3);
   }
   
-  header nav a:hover {
-    text-decoration: underline;
+  /* Último ítem sin borde */
+  nav li:last-child {
+    border-right: none;
   }
   
-  /* Footer común */
-  footer {
-    background-color: #333;
-    color: #fff;
-    padding: 10px 0;
-    text-align: center;
-    margin-top: 40px;
-  }
-  
-  footer p {
-    font-size: 1rem;
-  }
-  
-  /* Estilos para enlaces comunes */
-  a {
+  /* Enlaces del menú */
+  nav li a {
+    color: white;
     text-decoration: none;
-    color: #333;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
   }
   
-  a:hover {
-    color: #ff6347; /* color de hover */
+  /* Hover en los enlaces */
+  nav li a:hover {
+    color: #facc15; /* Amarillo clarito en hover */
   }  
+
+
+
+  /* Footer */
+.footer {
+    background: linear-gradient(90deg, #a33e16, #1e3a8a); /* Mismo estilo que tu nav */
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.footer p {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 20px;
+    font-size: 22px;
+}
+
+.footer-social a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #facc15; /* Amarillo clarito al hacer hover */
+}

@@ -2,16 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>La Ruta del Sabor</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Flavor Route</title>
+  
+  <!-- Estilos CSS -->
   <link rel="stylesheet" href="/css/global.css">
-  <link rel="stylesheet" href="/css/home.css"></head>
+  <link rel="stylesheet" href="/css/home.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  
+</head>
 <body>
   <%- include('../components/header') %>
 
-  <section class="hero">
-    <h2>Bienvenidos a La Ruta del Sabor</h2>
-    <p>Descubre los sabores que enamoran tu paladar.</p>
-  </section>
+
+  <div class="inicio-container">
+    <!-- Texto de bienvenida -->
+    <div class="inicio-text">
+      <h1 class="animate-title">The Flavor Route</h1>
+      <p class="animate-text">Four cultures, one unique pleasure.</p>
+    </div>
+
+    <!-- Logo -->
+    <div class="inicio-logo">
+      <img src="/assets/images/logo.png" alt="Logo"> <!-- Asegúrate de que la ruta del logo sea correcta -->
+    </div>
+  </div>
+
 
   <%- include('../components/footer') %>
 </body>

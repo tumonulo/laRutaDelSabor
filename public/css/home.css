@@ -1,56 +1,54 @@
-/* Fondo y márgenes generales de la página de inicio */
-body {
-  background-color: #fff;
-}
-
-/* Estilos de la cabecera */
-h1 {
-  font-size: 2.5rem;
-  text-align: center;
-  margin-top: 50px;
-  color: #333;
-}
-
-/* Sección principal */
-.main-content {
+.inicio-container {
   display: flex;
-  justify-content: space-around;
-  margin-top: 30px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #000; /* Fondo negro */
+  height: 70vh;
+  box-sizing: border-box;
+  color: white; /* Texto blanco */
 }
 
-/* Imagen en la página de inicio */
-.main-content img {
-  width: 300px;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+/* Sección de texto */
+.inicio-text {
+  flex: 1;
+  text-align: left;
+  padding: 20px;
 }
 
-/* Texto introductorio */
-.intro-text {
-  max-width: 600px;
-  margin-top: 30px;
-  font-size: 1.2rem;
-  line-height: 1.6;
-  text-align: justify;
+.inicio-text h1 {
+  color: #16a34a; /* Verde llamativo */
+  font-size: 4rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Sombra para el texto */
 }
 
-/* Botón de llamada a la acción */
-.call-to-action {
-  text-align: center;
-  margin-top: 40px;
+.inicio-text p {
+  color: #ddd; /* Gris claro */
+  font-size: 1.5rem;
+  line-height: 1.8;
 }
 
-.call-to-action a {
-  display: inline-block;
-  background-color: #ff6347;
-  color: #fff;
-  padding: 15px 30px;
-  text-transform: uppercase;
-  font-weight: bold;
-  border-radius: 5px;
-  text-decoration: none;
+/* Sección del logo */
+.inicio-logo {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.call-to-action a:hover {
-  background-color: #e5533b;
+.inicio-logo img {
+  height: 250px; /* Tamaño más grande */
+  animation: rotate 10s linear infinite; /* Rotación más lenta */
+  filter: drop-shadow(0 0 10px #16a34a) drop-shadow(0 0 20px #16a34a);
+}
+
+/* Animación de rotación */
+@keyframes rotate {
+  from {
+      transform: rotate(0deg);
+  }
+  to {
+      transform: rotate(360deg);
+  }
 }

@@ -43,15 +43,20 @@ header {
   
   /* Barra superior */
   .top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 40px;
     position: relative;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center; /* El centro natural será el logo */
+    padding: 20px 40px;
+    height: 80px; /* asegúrate que tenga altura */
+  } 
   
   /* Iconos sociales */
   .social-icons {
+    position: absolute;
+    left: 40px;
+    top: 50%;
+    transform: translateY(-50%); /* Para que se alineen verticalmente al centro */
     display: flex;
     gap: 20px;
     font-size: 22px;
@@ -68,15 +73,13 @@ header {
   
   /* Logo centrado */
   .logo-container {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
     text-align: center;
   }
   
   .logo-container img {
-    height: 100px;
-  }
+    height: 60px;
+    filter: drop-shadow(0 0 5px #a33e16) drop-shadow(0 0 5px #a33e16);
+}
   
   /* Navegación principal */
   nav {

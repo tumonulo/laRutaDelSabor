@@ -1,0 +1,56 @@
+/* Fondo y márgenes generales de la página de inicio */
+body {
+  background-color: #fff;
+}
+
+/* Estilos de la cabecera */
+h1 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-top: 50px;
+  color: #333;
+}
+
+/* Sección principal */
+.main-content {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+/* Imagen en la página de inicio */
+.main-content img {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Texto introductorio */
+.intro-text {
+  max-width: 600px;
+  margin-top: 30px;
+  font-size: 1.2rem;
+  line-height: 1.6;
+  text-align: justify;
+}
+
+/* Botón de llamada a la acción */
+.call-to-action {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.call-to-action a {
+  display: inline-block;
+  background-color: #ff6347;
+  color: #fff;
+  padding: 15px 30px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.call-to-action a:hover {
+  background-color: #e5533b;
+}

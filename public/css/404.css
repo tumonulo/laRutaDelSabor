@@ -1,0 +1,41 @@
+/* Fondo y centrado */
+body {
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  /* Número 404 */
+  h1 {
+    font-size: 8rem;
+    color: #ff6347;
+    margin-bottom: 20px;
+  }
+  
+  /* Mensaje de error */
+  p {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  /* Botón para volver al inicio */
+  a {
+    display: inline-block;
+    background-color: #333;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    font-size: 1.1rem;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+  }
+  
+  a:hover {
+    background-color: #ff6347;
+  }  

@@ -7,6 +7,8 @@ const app = express()
 
 const PORT = process.env.PORT || 3001
 
+app.set('view engine', 'ejs');
+app.set('views', path.join(__dirname, 'views'))
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(cors({
   origin: (origin, callback) => {
@@ -37,7 +39,7 @@ fs.readdirSync(folderPath).forEach((file) => {
 })
 
 app.use((req, res) => {
-  res.status(404).render('pages/404/404')
+  res.status(404).render('pages/404')
 })
 
 app.listen(PORT, () => {

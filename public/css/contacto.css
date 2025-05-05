@@ -1,0 +1,56 @@
+/* Fondo y márgenes generales de la página de contacto */
+body {
+    background-color: #f4f4f4;
+  }
+  
+  /* Títulos */
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  /* Sección de formulario de contacto */
+  .contact-form {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #ff6347;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+  }
+  
+  .contact-form button:hover {
+    background-color: #e5533b;
+  }
+  
+  /* Información de contacto */
+  .contact-info {
+    margin-top: 40px;
+    text-align: center;
+  }
+  
+  .contact-info p {
+    font-size: 1.1rem;
+    color: #333;
+  }  

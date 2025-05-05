@@ -5,14 +5,13 @@ const cors = require('cors')
 const express = require('express')
 const app = express()
 
-require('dotenv').config()
-const port = process.env.PORT || 3001
+const PORT = process.env.PORT || 3001
 
 app.use(express.static(path.join(__dirname, 'public')))
 app.use(cors({
   origin: (origin, callback) => {
     const acceptedOrigins = [
-      'https://games-navy-seven.vercel.app'
+      'https://la-ruta-del-sabor.vercel.app'
     ]
 
     if (acceptedOrigins.includes(origin)) {
@@ -38,9 +37,9 @@ fs.readdirSync(folderPath).forEach((file) => {
 })
 
 app.use((req, res) => {
-  res.status(404).sendFile(process.cwd() + '/public/html/404.html')
+  res.status(404).sendFile(process.cwd() + '/public/pages/404/404.html')
 })
 
-app.listen(port, () => {
+app.listen(PORT, () => {
     console.log(`app listening on port http://localhost:${port}!`)
 })

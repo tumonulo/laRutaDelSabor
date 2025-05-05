@@ -37,9 +37,9 @@ fs.readdirSync(folderPath).forEach((file) => {
 })
 
 app.use((req, res) => {
-  res.status(404).sendFile(process.cwd() + '/public/pages/404/404.html')
+  res.status(404).render('pages/404/404')
 })
 
 app.listen(PORT, () => {
-    console.log(`app listening on port http://localhost:${port}!`)
+    console.log(`app listening on port http://localhost:${PORT}!`)
 })

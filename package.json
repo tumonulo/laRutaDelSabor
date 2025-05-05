@@ -8,19 +8,18 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/tumonulo/prueba-de-proxy.git"
+    "url": "git+https://github.com/tumonulo/laRutaDelSabor.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/tumonulo/prueba-de-proxy/issues"
+    "url": "https://github.com/tumonulo/laRutaDelSabor/issues"
   },
-  "homepage": "https://github.com/tumonulo/prueba-de-proxy#readme",
+  "homepage": "https://github.com/tumonulo/laRutaDelSabor#readme",
   "dependencies": {
     "axios": "^1.7.9",
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
-    "express": "^4.21.2",
-    "express-http-proxy": "^2.1.1"
+    "express": "^4.21.2"
   }
 }

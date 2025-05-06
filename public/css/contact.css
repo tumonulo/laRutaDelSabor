@@ -19,8 +19,8 @@ body {
 
 /* Banner de contacto */
 .contact-banner {
-  width: auto;
-  height: 50px;
+  width: 100%;
+  height: auto;
   display: block;
 }
 
@@ -58,6 +58,6 @@ strong {
 }
 
 .contact-info a:hover {
-  color: #4c00ff; /* Color de enlace al pasar el ratón */
+  color: #009dff; /* Color de enlace al pasar el ratón */
   text-decoration: underline;
 }

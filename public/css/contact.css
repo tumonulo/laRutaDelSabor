@@ -8,7 +8,7 @@ body {
 
 /* Cabecera */
 .top-bar {
-  background: linear-gradient(90deg, #a33e16, #1e3a8a);
+  background: #000;
   color: white;
   text-align: center;
   padding: 20px 0;

@@ -19,7 +19,7 @@ body {
 
 /* Banner de contacto */
 .contact-banner {
-  width: 100%;
+  width: 100vh;
   height: auto;
   display: block;
 }
@@ -52,7 +52,7 @@ strong {
 
 /* Enlaces de contacto */
 .contact-info a {
-  color: #0000FF; /* Color de enlace */
+  color: #007bff; /* Color de enlace */
   text-decoration: none;
   transition: color 0.3s ease;
 }

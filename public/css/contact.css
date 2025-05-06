@@ -27,7 +27,6 @@ body {
 /* Información de contacto */
 .contact-info-container {
   max-width: 800px;
-  margin: 50px auto;
   padding: 30px;
   background-color: #4c4c4c; /* Fondo de la sección de contacto */
   border-radius: 10px;

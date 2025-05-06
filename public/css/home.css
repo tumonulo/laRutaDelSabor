@@ -40,8 +40,8 @@
 .inicio-logo img {
   height: 250px; /* Tamaño más grande */
   animation: rotate 10s linear infinite; /* Rotación más lenta */
-  filter: drop-shadow(0 0 10px #16a34a) drop-shadow(0 0 20px #16a34a);
-}
+  box-shadow: 0 0 10px #16a34a, 0 0 20px #16a34a; /* Fallback */
+  filter: drop-shadow(0 0 10px #16a34a) drop-shadow(0 0 20px #16a34a);}
 
 /* Animación de rotación */
 @keyframes rotate {

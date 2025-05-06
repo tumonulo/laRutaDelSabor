@@ -16,6 +16,12 @@ body {
   font-weight: bold;
 }
 
+strong {
+  color:#fff;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
 /* Formulario de contacto */
 .contact-form-container {
   max-width: 800px;

@@ -19,8 +19,8 @@ body {
 
 /* Banner de contacto */
 .contact-banner {
-  width: 100%;
-  height: auto;
+  width: auto;
+  height: 50px;
   display: block;
 }
 
@@ -29,7 +29,7 @@ body {
   max-width: 800px;
   margin: 50px auto;
   padding: 30px;
-  background-color: #686868; /* Fondo de la sección de contacto */
+  background-color: #4c4c4c; /* Fondo de la sección de contacto */
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -52,11 +52,12 @@ strong {
 
 /* Enlaces de contacto */
 .contact-info a {
-  color: #bb86fc; /* Color de enlace */
+  color: #0000FF; /* Color de enlace */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-  color: #ff79c6; /* Color de enlace al pasar el ratón */
+  color: #4c00ff; /* Color de enlace al pasar el ratón */
+  text-decoration: underline;
 }

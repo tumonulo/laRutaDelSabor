@@ -16,69 +16,47 @@ body {
   font-weight: bold;
 }
 
-strong {
-  color:#fff;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 16px;
+/* Banner de contacto */
+.contact-banner {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
-/* Formulario de contacto */
-.contact-form-container {
+/* Información de contacto */
+.contact-info-container {
   max-width: 800px;
   margin: 50px auto;
   padding: 30px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-.contact-form label {
-  display: block;
-  margin: 10px 0 5px;
-  font-weight: bold;
-}
-
-.contact-form input,
-.contact-form textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-.contact-form button {
-  background-color: #ff6347;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  font-size: 1rem;
-  cursor: pointer;
-  text-transform: uppercase;
-  transition: background-color 0.3s ease;
-}
-
-.contact-form button:hover {
-  background-color: #e5533b;
-}
-
-/* Información de contacto */
-.contact-info {
-  height: 70vh;
   text-align: center;
-  background:#000;
 }
 
-.contact-info .email-link {
+.contact-info {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-info li {
+  margin: 15px 0;
+}
+
+strong {
+  color: #000;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+}
+
+/* Enlaces de contacto */
+.contact-info a {
   color: #1e3a8a;
-  font-weight: bold;
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
-.contact-info .email-link:hover {
+.contact-info a:hover {
   color: #a33e16;
 }
 

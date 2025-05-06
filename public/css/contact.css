@@ -1,15 +1,16 @@
 /* Estilos generales para el fondo y tipografía */
 body {
   font-family: 'Arial', sans-serif;
-  background-color: #f4f4f4;
+  background-color: #000; /* Fondo oscuro */
+  color: #e0e0e0; /* Texto claro */
   margin: 0;
   padding: 0;
 }
 
 /* Cabecera */
 .top-bar {
-  background: #000;
-  color: white;
+  background: #000; /* Fondo de cabecera oscuro */
+  color: #ffffff; /* Texto blanco */
   text-align: center;
   padding: 20px 0;
   font-size: 1.5rem;
@@ -28,9 +29,9 @@ body {
   max-width: 800px;
   margin: 50px auto;
   padding: 30px;
-  background-color: #fff;
+  background-color: #686868; /* Fondo de la sección de contacto */
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
@@ -44,27 +45,18 @@ body {
 }
 
 strong {
-  color: #000;
+  color: #ffffff; /* Texto fuerte blanco */
   font-family: Arial, Helvetica, sans-serif;
   font-size: 16px;
 }
 
 /* Enlaces de contacto */
 .contact-info a {
-  color: #1e3a8a;
+  color: #bb86fc; /* Color de enlace */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-  color: #a33e16;
-}
-
-/* Footer */
-.footer {
-  background-color: #1e3a8a;
-  color: white;
-  text-align: center;
-  padding: 20px 0;
-  font-size: 0.9rem;
+  color: #ff79c6; /* Color de enlace al pasar el ratón */
 }

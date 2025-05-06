@@ -1,56 +1,85 @@
-/* Fondo y márgenes generales de la página de contacto */
+/* Estilos generales para el fondo y tipografía */
 body {
-    background-color: #f4f4f4;
-  }
-  
-  /* Títulos */
-  h2 {
-    font-size: 2rem;
-    color: #333;
-    text-align: center;
-    margin-top: 50px;
-  }
-  
-  /* Sección de formulario de contacto */
-  .contact-form {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  }
-  
-  .contact-form input,
-  .contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .contact-form button {
-    background-color: #ff6347;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-transform: uppercase;
-  }
-  
-  .contact-form button:hover {
-    background-color: #e5533b;
-  }
-  
-  /* Información de contacto */
-  .contact-info {
-    margin-top: 40px;
-    text-align: center;
-  }
-  
-  .contact-info p {
-    font-size: 1.1rem;
-    color: #333;
-  }  
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Cabecera */
+.top-bar {
+  background: linear-gradient(90deg, #a33e16, #1e3a8a);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+/* Formulario de contacto */
+.contact-form-container {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.contact-form label {
+  display: block;
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.contact-form button {
+  background-color: #ff6347;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: background-color 0.3s ease;
+}
+
+.contact-form button:hover {
+  background-color: #e5533b;
+}
+
+/* Información de contacto */
+.contact-info {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.contact-info .email-link {
+  color: #1e3a8a;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contact-info .email-link:hover {
+  color: #a33e16;
+}
+
+/* Footer */
+.footer {
+  background-color: #1e3a8a;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  font-size: 0.9rem;
+}

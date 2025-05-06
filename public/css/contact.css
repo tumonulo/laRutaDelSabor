@@ -60,8 +60,9 @@ body {
 
 /* Información de contacto */
 .contact-info {
-  margin-top: 20px;
+  height: 70vh;
   text-align: center;
+  background:#000;
 }
 
 .contact-info .email-link {

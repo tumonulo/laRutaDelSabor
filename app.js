@@ -6,10 +6,6 @@ const cors = require('cors')
 const express = require('express')
 const app = express()
 
-const { inject } = require('@vercel/analytics')
- 
-inject()
-
 const PORT = process.env.PORT || 3000
 
 app.set('view engine', 'ejs');

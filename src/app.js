@@ -6,7 +6,7 @@ const cors = require('cors')
 const express = require('express')
 const app = express()
 
-const PORT = process.env.PORT || 3000
+const { PORT } = require('./config.js')
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
@@ -34,13 +34,21 @@ app.use(cors({
 app.disable('x-powered-by')
 
 const folderPath = path.join(__dirname, 'routes')
-fs.readdirSync(folderPath).forEach((file) => {
+const files = fs.readdirSync(folderPath).filter(file => file.endsWith('.js'))
+
+for (const file of files) {
+
   const filePath = path.join(folderPath, file)
   const route = require(filePath)
+
+  const mainPaths = [index, main, home]
+  
   const routeName = path.basename(file, '.js')
-  const routePath = routeName === 'index' ? '/' : `/${routeName}`
+
+  const routePath = mainPaths.includes(routeName) ? '/' : `/${routeName}`
+
   app.use(routePath, route)
-})
+}
 
 app.use((req, res) => {
   res.status(404).render('pages/404')

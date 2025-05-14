@@ -33,7 +33,7 @@ app.use(cors({
 
 app.disable('x-powered-by')
 
-const folderPath = __dirname + '/routes'
+const folderPath = path.join(__dirname, 'routes')
 fs.readdirSync(folderPath).forEach((file) => {
   const filePath = path.join(folderPath, file)
   const route = require(filePath)

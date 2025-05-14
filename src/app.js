@@ -8,9 +8,11 @@ const app = express()
 
 const PORT = process.env.PORT || 3000
 
-app.set('view engine', 'ejs');
-app.set('views', path.join(__dirname, 'views'))
-app.use(express.static(path.join(__dirname, 'public')))
+app.set('view engine', 'ejs')
+app.set('views', path.join(__dirname, 'pages'))
+
+app.use(express.static(path.join(__dirname, '..', 'public')))
+
 app.use(cors({
   origin: (origin, callback) => {
     const acceptedOrigins = [
@@ -28,6 +30,7 @@ app.use(cors({
     return callback(new Error('Not allowed by CORS'))
   }
 }))
+
 app.disable('x-powered-by')
 
 const folderPath = __dirname + '/routes'
@@ -36,11 +39,11 @@ fs.readdirSync(folderPath).forEach((file) => {
   const route = require(filePath)
   const routeName = path.basename(file, '.js')
   const routePath = routeName === 'index' ? '/' : `/${routeName}`
-  app.use(`${routePath}`, route)
+  app.use(routePath, route)
 })
 
 app.use((req, res) => {
-  res.status(404).render('pages/404')
+  res.status(404).render('404')
 })
 
 app.listen(PORT, () => {

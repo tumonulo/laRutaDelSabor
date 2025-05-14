@@ -41,7 +41,7 @@ for (const file of files) {
   const filePath = path.join(folderPath, file)
   const route = require(filePath)
 
-  const mainPaths = [index, main, home]
+  const mainPaths = ['index', 'main', 'home']
   
   const routeName = path.basename(file, '.js')
 

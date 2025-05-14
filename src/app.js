@@ -9,7 +9,7 @@ const app = express()
 const PORT = process.env.PORT || 3000
 
 app.set('view engine', 'ejs')
-app.set('views', path.join(__dirname, 'pages'))
+app.set('views', path.join(__dirname, 'views'))
 
 app.use(express.static(path.join(__dirname, '..', 'public')))
 
@@ -43,7 +43,7 @@ fs.readdirSync(folderPath).forEach((file) => {
 })
 
 app.use((req, res) => {
-  res.status(404).render('404')
+  res.status(404).render('pages/404')
 })
 
 app.listen(PORT, () => {

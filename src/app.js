@@ -6,7 +6,7 @@ import cors from 'cors'
 import express from 'express'
 const app = express()
 
-const { PORT } = require('./configs/config.js')
+import { PORT } from './configs/config.js'
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))

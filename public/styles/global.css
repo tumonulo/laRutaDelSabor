@@ -22,12 +22,11 @@ body {
   }
   
   header nav {
-    background-color: rgb(0, 89, 255);
+    background-color: rgb(0, 65, 187);
     border-radius: 20px;
     padding: 1rem 2rem;
-    max-width: 60vw;
-    width: 100%;
-    box-shadow: 0 2px 5px rgb(0, 35, 99);
+    width: 50vw;
+    box-shadow: 0 2px 5px rgb(0, 28, 80);
     animation: blurIn linear both;
     animation-timeline: scroll(root);
     animation-range: 0 150px
@@ -40,6 +39,7 @@ body {
       border-top-right-radius: 0;
       backdrop-filter: blur(5px);
       background-color: rgba(0, 89, 255, .4);
+      width: 60vw;
     }
   }  
 

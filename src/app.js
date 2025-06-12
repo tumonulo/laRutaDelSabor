@@ -1,12 +1,12 @@
-const fs = require('node:fs')
-const path = require('node:path')
+import fs from 'node:fs'
+import path from 'node:path'
 
-const cors = require('cors')
+import cors from 'cors'
 
-const express = require('express')
+import express from 'express'
 const app = express()
 
-const { PORT } = require('./config.js')
+const { PORT } = require('./configs/config.js')
 
 app.set('view engine', 'ejs')
 app.set('views', path.join(__dirname, 'views'))
